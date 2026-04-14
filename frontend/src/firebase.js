@@ -8,14 +8,13 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "real-estate-hub-pern.firebaseapp.com",
-  projectId: "real-estate-hub-pern",
-  storageBucket: "real-estate-hub-pern.firebasestorage.app",
-  messagingSenderId: "742983989631",
-  appId: "1:742983989631:web:85826e57100d08950c824a",
-  measurementId: "G-9Y5WGL4FZF"
+  authDomain: import.meta.env.VITE_FIREBASE_AuthDomain,
+  projectId: import.meta.env.VITE_FIREBASE_ProjectId,
+  storageBucket: import.meta.env.VITE_FIREBASE_StorageBucket,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MessagingSenderId,
+  appId: import.meta.env.VITE_FIREBASE_AppId,
+  measurementId: import.meta.env.VITE_FIREBASE_MeasurementId,
 };
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
